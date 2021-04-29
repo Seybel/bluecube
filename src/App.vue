@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="md-layout">
+      <Sidebar />
+      <Home />
+    <!-- <div class="md-layout-item">2</div>
+    <div class="md-layout-item">3</div> -->
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Sidebar from './components/Sidebar'
+import Home from './components/Home'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Sidebar,
+    Home
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap');
+
+body {
+  background: #fff;
 }
+#app {
+  font-family: 'Martel Sans', sans-serif;
+}
+// .vl {
+//   border-left: 6px solid green !important;
+//   height: 500px !important;
+// }
 </style>
